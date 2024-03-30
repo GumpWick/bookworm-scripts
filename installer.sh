@@ -17,7 +17,7 @@ mkdir ~/Screenshots/
 # bash ~/bookworm-scripts/resources/bspwm-commands
 # bash ~/bookworm-scripts/resources/dk-commands
 # bash ~/bookworm-scripts/resources/dwm-commands
-# bash ~/bookworm-scripts/resources/qtile-commands
+bash ~/bookworm-scripts/resources/qtile-commands
 # bash ~/bookworm-scripts/resources/i3-commands
 
 # XFCE4 Minimal
@@ -51,7 +51,7 @@ sudo apt install -y network-manager network-manager-gnome
 sudo apt install -y lxappearance 
 
 # Browser Installation (eg. chromium)
-sudo apt install -y firefox-esr 
+sudo apt install -y firefox-esr chromium-browser
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
@@ -67,12 +67,12 @@ sudo apt install -y fonts-recommended fonts-ubuntu fonts-font-awesome fonts-term
 sudo apt install -y exa
 
 
-# Printing and bluetooth (if needed)
-# sudo apt install -y cups system-config-printer simple-scan
-# sudo apt install -y bluez blueman
+# Printing and bluetooth
+sudo apt install -y cups system-config-printer simple-scan
+sudo apt install -y bluez blueman
 
-# sudo systemctl enable cups
-# sudo systemctl enable bluetooth
+sudo systemctl enable cups
+sudo systemctl enable bluetooth
 
 # Packages needed for window manager installation
 sudo apt install -y picom rofi dunst libnotify-bin unzip wmctrl xdotool libnotify-dev
@@ -86,20 +86,16 @@ sudo apt install -y picom rofi dunst libnotify-bin unzip wmctrl xdotool libnotif
 
 # My Favorites
 # Multimedia/GFX
-sudo apt install -y mpv qimgv scrot gimp obs-studio mkvtoolnix-gui redshift eog brightnessctl
+sudo apt install -y vlc qimgv scrot gimp obs-studio redshift eog brightnessctl
 
 # PDF 
-sudo apt install -y  evince pdfarranger
+sudo apt install -y  pdfarranger
 
 # Others
-sudo apt install -y numlockx figlet galculator cpu-x udns-utils whois curl tree
-
-# Install Lightdm Console Display Manager
-# sudo apt install -y lightdm lightdm-gtk-greeter-settings
-# sudo systemctl enable lightdm
+sudo apt install -y numlockx figlet udns-utils whois curl tree
 
 # Install the Ly Console Display Manager
-bash ~/bookworm-scripts/ly.sh
+# bash ~/bookworm-scripts/ly.sh
 
 
 ########################################################
@@ -110,9 +106,6 @@ bash ~/bookworm-scripts/ly.sh
 ## Configuration uses 
 
 bash ~/bookworm-scripts/resources/nerdfonts.sh
-
-\cp ~/bookworm-scripts/resources/.bashrc ~
-
 
 sudo apt autoremove
 
