@@ -86,7 +86,7 @@ sudo apt install -y picom rofi dunst libnotify-bin unzip wmctrl xdotool libnotif
 
 # My Favorites
 # Multimedia/GFX
-sudo apt install -y vlc qimgv scrot gimp obs-studio redshift eog brightnessctl
+sudo apt install -y vlc qimgv scrot obs-studio redshift eog brightnessctl
 
 # PDF 
 sudo apt install -y pdfarranger
