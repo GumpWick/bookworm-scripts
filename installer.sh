@@ -68,8 +68,8 @@ sudo apt install -y network-manager network-manager-gnome
 # Installation for Appearance management
 sudo apt install -y lxappearance 
 
-# Browser Installation (eg. chromium)
-sudo apt install -y firefox-esr chromium-browser
+# Browser Installation
+sudo apt install -y firefox-esr
 
 # Desktop background browser/handler 
 # feh --bg-fill /path/to/directory 
@@ -82,7 +82,7 @@ sudo apt install -y fonts-recommended fonts-ubuntu fonts-font-awesome fonts-term
 # EXA installation
 # replace ls command in .bashrc file with line below
 # alias ls='exa -al --long --header --color=always --group-directories-first' 
-sudo apt install -y exa
+# sudo apt install -y exa
 
 
 # Printing and bluetooth
