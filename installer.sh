@@ -9,6 +9,9 @@ sudo apt install -y xorg xserver-xorg xbacklight xbindkeys xvkbd xinput
 # PACKAGE INCLUDES build-essential.
 sudo apt install -y build-essential
 
+# Others
+sudo apt install -y numlockx figlet udns-utils whois curl tree
+
 # Create folders in user directory (eg. Documents,Downloads,etc.)
 xdg-user-dirs-update
 mkdir ~/Screenshots/
@@ -17,7 +20,7 @@ mkdir ~/Screenshots/
 # bash ~/bookworm-scripts/resources/bspwm-commands
 # bash ~/bookworm-scripts/resources/dk-commands
 # bash ~/bookworm-scripts/resources/dwm-commands
-bash ~/bookworm-scripts/resources/qtile-commands
+# bash ~/bookworm-scripts/resources/qtile-commands
 # bash ~/bookworm-scripts/resources/i3-commands
 
 # XFCE4 Minimal
@@ -35,8 +38,23 @@ sudo apt install -y policykit-1-gnome network-manager network-manager-gnome
 # Thunar
 sudo apt install -y thunar thunar-archive-plugin thunar-volman file-roller
 
-# Terminal (eg. terminator,kitty,xfce4-terminal)
-sudo apt install -y kitty tilix 
+# Terminal (eg. terminator,kitty,xfce4-terminal, alacritty)
+#sudo apt install -y kitty tilix 
+git clone https://github.com/alacritty/alacritty.git
+cd alacritty
+
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+rustup override set stable
+rustup update stable
+
+sudo apt install cmake pkg-config libfreetype6-dev libfontconfig1-dev libxcb-xfixes0-dev libxkbcommon-dev python3
+
+cargo build --release
+
+sudo cp target/release/alacritty /usr/local/bin
+
+cd
 
 # Sound packages
 sudo apt install -y pulseaudio alsa-utils pavucontrol volumeicon-alsa pamixer
@@ -86,13 +104,10 @@ sudo apt install -y picom rofi dunst libnotify-bin unzip wmctrl xdotool libnotif
 
 # My Favorites
 # Multimedia/GFX
-sudo apt install -y vlc qimgv scrot obs-studio redshift eog brightnessctl
+sudo apt install -y vlc qimgv scrot obs-studio eog brightnessctl
 
 # PDF 
 sudo apt install -y pdfarranger
-
-# Others
-sudo apt install -y numlockx figlet udns-utils whois curl tree
 
 # Install the Ly Console Display Manager
 # bash ~/bookworm-scripts/ly.sh
